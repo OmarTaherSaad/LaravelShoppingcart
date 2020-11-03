@@ -108,7 +108,7 @@ class Cart
         }
 
         $content->put($cartItem->rowId, $cartItem);
-
+        
         $this->events->dispatch('cart.added', $cartItem);
 
         $this->session->put($this->instance, $content);
